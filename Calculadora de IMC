@@ -1,0 +1,35 @@
+# Este software é uma calculadora de IMC
+# Abaixo de 18.5 Abaixo do normal
+# Entre 18.5 e 24.9 Normal
+# Entre 25.0 e 29.9 Sobrepeso
+# Acima de 29.9 Obesidade
+
+print("Bem vinde a calculadora básica de IMC")
+print("Por favor, insira as informações pedidas.")
+print("Para começar, gostaria de ser chamado pelo nome?")
+nome = int(input("Digite: 1 - Sim, 2 - Não "))
+
+if nome == 1:
+    nome = input("Como deseja ser chamado? ")
+    print(f"Olá {nome}!")
+else: 
+    print("Certo!")
+
+peso = float(input("Insira seu peso: "))
+altura = float(input("Insira sua altura: "))
+
+imc = peso / altura**2
+
+if imc < 18.5:
+    print(f"Seu índice de massa corporal está abaixo do normal. Seu IMC é {imc}")
+elif imc < 24.9:
+    print(f"Seu índice de massa corporal está normal. Seu IMC é {imc}")
+elif imc < 29.9:
+        print(f"Seu índice de massa corporal está acima do normal, indicando que você está com sobrepeso. Seu IMC é {imc}")
+elif imc > 29.9:
+    print(f"Seu índice de massa corporal está acima do normal, indicando obesidade. Seu IMC é {imc}")
+else:
+    print("Valores informados estão fora do padrão!")
+
+print("Para maiores informações de como manter ou melhorar seu IMC, recomenda-se procurar um especialista.")
+print("Obrigado por utilizar esta calculadora!")
